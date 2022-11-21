@@ -3,13 +3,14 @@ import sys
 
 from PyQt5 import uic
 from PyQt5.QtGui import QPainter, QColor
-from PyQt5.QtWidgets import QWidget, QApplication, QPushButton, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from задание_3_qt import Ui_MainWindow
 
 
-class Example(QMainWindow):
+class Example(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('untitled.ui', self)
+        self.setupUi(self)
         self.initUI()
 
     def initUI(self):
